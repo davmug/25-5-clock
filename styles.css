@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.container {
+    background-color: #343a40;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.length-control {
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls button {
+    margin: 0 5px;
+}
+
+.timer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.timer-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.timer-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.timer-background {
+    fill: none;
+    stroke: #555;
+    stroke-width: 10;
+}
+
+.timer-progress-dashed {
+    fill: none;
+    stroke: #00ff99;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s linear;
+}
+
+#time-left {
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.countdown-number {
+    animation-duration: 0.5s;
+    animation-name: countdownChange;
+}
+
+@keyframes countdownChange {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+

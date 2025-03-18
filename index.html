@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25+5 Clock</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <div class="container text-center">
+      <h1>25+5 Clock</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="length-control">
+            <div id="break-label">Break Length</div>
+            <div class="controls">
+              <button id="break-decrement" class="btn btn-danger"><i class="bi bi-arrow-down"></i></button>
+              <div id="break-length">5</div>
+              <button id="break-increment" class="btn btn-success"><i class="bi bi-arrow-up"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="length-control">
+            <div id="session-label">Session Length</div>
+            <div class="controls">
+              <button id="session-decrement" class="btn btn-danger"><i class="bi bi-arrow-down"></i></button>
+              <div id="session-length">25</div>
+              <button id="session-increment" class="btn btn-success"><i class="bi bi-arrow-up"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timer">
+        <div id="timer-label">Session</div>
+        <div class="timer-container">
+          <svg class="timer-svg" width="200" height="200" viewBox="0 0 200 200">
+            <circle class="timer-background" cx="100" cy="100" r="90"></circle>
+            <path class="timer-progress-dashed" cx="100" cy="100" r="90" fill="none"></path>
+          </svg>
+          <div id="time-left" class="countdown-number">25:00</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start_stop" class="btn btn-success">Start</button>
+        <button id="reset" class="btn btn-danger">Reset</button>
+      </div>
+
+      <audio id="beep" preload="auto" src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"></audio>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
